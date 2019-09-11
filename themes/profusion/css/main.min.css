@@ -838,7 +838,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
   right: 0;
   left: 0;
   bottom: 0;
-  padding: 15px;
+  padding: 10px;
   -webkit-border-radius: 5px;
           border-radius: 5px;
   background-color: #00adb3;
@@ -872,7 +872,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
       text-decoration: none; }
   .inbox__b h3 {
     font-size: 23px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     letter-spacing: 0; }
   .inbox__b p {
     font-size: 17px;
@@ -881,7 +881,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
     margin-left: 0;
     display: flex;
     margin-top: 5px;
-    margin-bottom: 10px; }
+    margin-bottom: 5px; }
     .inbox__b .gtknw___box-form [type="text"],
     .inbox__b .gtknw___box-form [type="email"],
     .inbox__b .gtknw___box-form [type="password"],
