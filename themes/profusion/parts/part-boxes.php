@@ -1,4 +1,4 @@
-<div class="set_background">
+<div class="set_background gray-bg">
 	<div class="container">
 		<section class="tac section-b">
         	<?php if($home_trio_text = get_sub_field('home_trio_text')): ?>

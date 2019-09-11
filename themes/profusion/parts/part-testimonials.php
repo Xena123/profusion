@@ -1,4 +1,4 @@
-<div class="gray-bg">
+<div class="transparent-bg">
 	<div class="container">
 		<h2><?php the_sub_field('testimonial_slider_title'); ?></h2>
 		<div class="owl-carousel testimonal-caro testimon-js">
