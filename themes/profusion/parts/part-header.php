@@ -3,19 +3,13 @@
     <div class="b-header-inner">
       <div class="b-header-inner-elem">
         <div class="logo">
-          <?php if(is_page_template( array(
-            'page-blog.php'
-          )) || is_singular( array( 'post' ))): ?>
-            <a href="<?php bloginfo('url'); ?>" style="display:inline-block; vertical-align: top; max-width:115px;">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/blog-logo.svg" alt="">
-            </a>
-          <?php else: ?>
+          
             <?php if($sitelogo = get_field('site_logo', 'options')):?>
               <a href="<?php bloginfo('url'); ?>">
                 <img src="<?php echo $sitelogo;?>" alt="">
               </a>
             <?php endif;?>
-          <?php endif; ?>
+          
 
             
         </div>

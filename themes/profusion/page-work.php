@@ -53,16 +53,16 @@ get_header(); ?>
 					</div>
 				</div>
 			</div>
-			<div class="blue-bg info_sec">
+			<!-- <div class="blue-bg info_sec">
 				<div class="container">
 					<div class="rates-caro-elem">
-						<?php the_field('info_section_text'); ?>
-						<?php if($info_section_btn = get_field('info_section_btn')): ?>
-							<a href="<?php echo $info_section_btn['url']; ?>" class="main-btn main-white-btn" target="<?php echo $info_section_btn['target']; ?>"><?php echo $info_section_btn['title']; ?></a>
-						<?php endif; ?>
+						<?php //the_field('info_section_text'); ?>
+						<?php //if($info_section_btn = get_field('info_section_btn')): ?>
+							<a href="<?php //echo $info_section_btn['url']; ?>" class="main-btn main-white-btn" target="<?php //echo $info_section_btn['target']; ?>"><?php //echo $info_section_btn['title']; ?></a>
+						<?php //endif; ?>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</main>        
     <?php endwhile; ?>
 <?php endif; ?>
