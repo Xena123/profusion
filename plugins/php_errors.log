@@ -1,0 +1,8 @@
+[09-Apr-2019 00:59:05 Europe/London] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /srv/www/vhosts/profusion.com/public/wp-content/plugins/hello.php:59
+Stack trace:
+#0 {main}
+  thrown in /srv/www/vhosts/profusion.com/public/wp-content/plugins/hello.php on line 59
+[09-Apr-2019 00:59:20 Europe/London] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /srv/www/vhosts/profusion.com/public/wp-content/plugins/hello.php:59
+Stack trace:
+#0 {main}
+  thrown in /srv/www/vhosts/profusion.com/public/wp-content/plugins/hello.php on line 59

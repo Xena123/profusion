@@ -1,0 +1,1 @@
+<?php the_sub_field('blog_just_text'); ?>
