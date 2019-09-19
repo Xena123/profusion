@@ -12546,3 +12546,30 @@ body .row-blog.align-items-end {
 .blog__elem-img {
     height: 100%;
 }
+
+#map_ol3js_1 {
+    /*width: 250px !important;
+    height: 250px !important;*/
+}
+
+.l-contact--part {
+    padding: 35px;
+}
+
+.address__box_info-grid__elem.map {
+    margin-left: auto;
+}
+
+
+@media(min-width: 1000px) {
+    .l-contact {
+        display: flex;
+    }
+
+    .l-contact--part {
+        width: 50%;
+        padding: 35px;
+    }
+}
+
+
