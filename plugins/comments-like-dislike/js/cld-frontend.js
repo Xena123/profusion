@@ -42,7 +42,7 @@ jQuery(document).ready(function ($) {
                 like_dislike_flag = 0;
 
             }
-            if(restriction == 'user' && user_check == '1'){
+            if (restriction == 'user' && user_check == '1') {
                 like_dislike_flag = 0;
             }
             if (like_dislike_flag == 1) {

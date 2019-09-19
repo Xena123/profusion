@@ -1,10 +1,10 @@
 === Comments Like Dislike ===
 Contributors: Happy Coders
 Donate link: http://wphappycoders.com/
-Tags: comments like dislike, comments, comments like, comments dislike, comment, like dislike, like, dislike
+Tags: comments, comment, like, dislike, like dislike
 Requires at least: 4.5
-Tested up to: 5.0
-Stable tag: 1.0.7
+Tested up to: 5.2
+Stable tag: 1.0.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -74,6 +74,10 @@ Our plugin does contains many actions and filters which are described inside the
 7. Like Dislike Design Settings
 
 == Changelog ==
+= 1.0.8 = 
+* Added login link field to redirect users on Login restriction option
+* Added cld_fontawesome filter so that users can load the fontawesome from their own theme in case the version is not matched.
+ 
 = 1.0.7 = 
 * Stripped quotes from the settings
 * Added user logged in restriction 

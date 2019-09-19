@@ -1,3 +1,4 @@
+<!-- part-slider -->
 <div class="owl-carousel main-slider main-slider__js">
 	<?php while ( have_rows('home_slider') ) : the_row(); 
 	    $img = get_sub_field('img');

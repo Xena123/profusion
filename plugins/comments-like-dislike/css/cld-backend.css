@@ -29,6 +29,7 @@ span.cld-avatar-holder {
 }
 .cld-field {
     display: inline-block;
+    width: calc(100% - 300px);
 }
 .cld-each-template-preview {
     margin-top: 20px;

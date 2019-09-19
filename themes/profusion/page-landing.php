@@ -3,8 +3,8 @@
 /*
 Template Name: Landing 
 */
-
 get_header(); ?>
+<!-- page-landing -->
 <?php if(have_posts()) : ?>
     <?php while(have_posts()) : the_post(); ?>
 

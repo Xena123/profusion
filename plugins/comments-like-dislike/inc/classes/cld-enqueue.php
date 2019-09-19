@@ -6,7 +6,7 @@ if ( !class_exists( 'CLD_Enqueue' ) ) {
 
         /**
          * Includes all the frontend and backend JS and CSS enqueues
-         * 
+         *
          * @since 1.0.0
          */
         function __construct() {
@@ -15,12 +15,20 @@ if ( !class_exists( 'CLD_Enqueue' ) ) {
         }
 
         function register_frontend_assets() {
+            $fontawesome_url = CLD_CSS_DIR . '/fontawesome/css/all.min.css';
             /**
-             * Fontawesome 5 support 
-             * 
+             * Filters the fontawesome file being enqueued
+             *
+             * @param string $fontawesome_url
+             * @since 1.0.8
+             */
+            $fontawesome_url = apply_filters( 'cld_fontawesome_url', $fontawesome_url );
+            /**
+             * Fontawesome 5 support
+             *
              * @version 1.0.6
              */
-            wp_enqueue_style( 'cld-font-awesome', CLD_CSS_DIR . '/fontawesome/css/all.min.css', array(), CLD_VERSION );
+            wp_enqueue_style( 'cld-font-awesome', $fontawesome_url, array(), CLD_VERSION );
             wp_enqueue_style( 'cld-frontend', CLD_CSS_DIR . '/cld-frontend.css', array(), CLD_VERSION );
             wp_enqueue_script( 'cld-frontend', CLD_JS_DIR . '/cld-frontend.js', array( 'jquery' ), CLD_VERSION );
             $ajax_nonce = wp_create_nonce( 'cld-ajax-nonce' );

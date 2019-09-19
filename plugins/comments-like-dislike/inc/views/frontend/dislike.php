@@ -1,5 +1,5 @@
 <div class="cld-dislike-wrap  cld-common-wrap">
-    <a href="javascript:void(0);" class="cld-dislike-trigger cld-like-dislike-trigger <?php echo ($user_ip_check == 1 || isset( $_COOKIE['cld_' . $comment_id] )) ? 'cld-prevent' : ''; ?>" title="<?php echo $dislike_title; ?>" data-comment-id="<?php echo $comment_id; ?>" data-trigger-type="dislike" data-ip-check="<?php echo $user_ip_check; ?>" data-restriction="<?php echo esc_attr( $cld_settings['basic_settings']['like_dislike_resistriction'] ); ?>" data-user-check="<?php echo $user_check; ?>">
+    <a href="<?php echo $href; ?>" class="cld-dislike-trigger cld-like-dislike-trigger <?php echo ($user_ip_check == 1 || isset( $_COOKIE['cld_' . $comment_id] )) ? 'cld-prevent' : ''; ?>" title="<?php echo $dislike_title; ?>" data-comment-id="<?php echo $comment_id; ?>" data-trigger-type="dislike" data-ip-check="<?php echo $user_ip_check; ?>" data-restriction="<?php echo esc_attr( $cld_settings['basic_settings']['like_dislike_resistriction'] ); ?>" data-user-check="<?php echo $user_check; ?>">
         <?php
         $template = esc_attr( $cld_settings['design_settings']['template'] );
         switch( $template ) {

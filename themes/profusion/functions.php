@@ -18,7 +18,6 @@ $detect = new Mobile_Detect;
 
 function theme_scripts() {
     wp_enqueue_style( 'main-css', get_template_directory_uri() . '/css/main.min.css' );
-    wp_enqueue_style( 'add-css', get_template_directory_uri() . '/css/add.css' );
 
     wp_enqueue_script( 'momentjs', get_template_directory_uri() . '/js/moment.js', array('jquery'), null, true );
     wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.min.js', array(), null, true );

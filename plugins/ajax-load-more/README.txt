@@ -4,7 +4,7 @@ Donate link: https://connekthq.com/donate/
 Tags: infinite scroll, infinite scrolling, scroll, infinite, lazy load, lazy loading, endless scroll, pagination, ajax pagination, ajax, ajax posts, woocommerce, ajax load more, masonry
 Requires at least: 4.0
 Tested up to: 5.2.2
-Stable tag: 5.1.2
+Stable tag: 5.1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -125,8 +125,9 @@ Ajax Load More accepts a number of parameters that are passed to the WordPress q
 *   **css_classes** - Add custom CSS classes to the Ajax Load More container. Default = null
 *   **id** - A unique ID for the Ajax Load More instance.
 *   **nested** - Is this a nested Ajax Load More instance. Default = false
+*   **no_results_text** - Display text/html when zero results are returned in an Ajax Load More query.
 
-[&rarr; See All Parameters](https://connekthq.com/plugins/ajax-load-more/docs/shortcode-parameters/)
+&rarr; [See All Parameters](https://connekthq.com/plugins/ajax-load-more/docs/shortcode-parameters/)
 
 
 #### Example Ajax Load More Shortcode
@@ -139,10 +140,10 @@ Ajax Load More accepts a number of parameters that are passed to the WordPress q
 * **[Default](https://connekthq.com/plugins/ajax-load-more/examples/default/)** - Out of the box functionality and styling.
 * **[Advanced Custom Fields](https://connekthq.com/plugins/ajax-load-more/examples/advanced-custom-fields/)** - Infinite scroll Advanced Custom Fields data with Ajax Load More.
 * **[Attachments](https://connekthq.com/plugins/ajax-load-more/examples/attachments/)** - Endless scroll post attachments.
+* **[CSS Grid](https://connekthq.com/plugins/ajax-load-more/examples/css-grid/)** - Rendering Ajax Load More listings with CSS Grid.
 * **[Destroy After](https://connekthq.com/plugins/ajax-load-more/examples/destroy-after/)** - Remove Ajax Load More functionality after 'n' number of pages.
 * **[Event Listing](https://connekthq.com/plugins/ajax-load-more/examples/event-listing/)** - Ordering and listing events by custom field date.
 * **[Filtering](https://connekthq.com/plugins/ajax-load-more/examples/filtering/)** - Reset and filter an Ajax Load More instance.
-* **[Flexbox](https://connekthq.com/plugins/ajax-load-more/examples/flexbox/)** - Creating a responsive Ajax Load More grid with Flexbox.
 * **[Infinite Scroll](https://connekthq.com/plugins/ajax-load-more/examples/infinite-scroll/)** - A look at the new loading functionality and styles.
 * **[Images Loaded](https://connekthq.com/plugins/ajax-load-more/examples/images-loaded/)** - Download images before displaying ajax loaded content.
 * **[Masonry](https://connekthq.com/plugins/ajax-load-more/examples/masonry/)** - Creating a flexible grid layout with Masonry JS.
@@ -157,7 +158,7 @@ Ajax Load More accepts a number of parameters that are passed to the WordPress q
 * **[Slideshow Gallery](https://connekthq.com/plugins/ajax-load-more/examples/slideshow-gallery/)** - Create a gallery of posts with Ajax Load More and the Paging add-on.
 * **[Table Layout](https://connekthq.com/plugins/ajax-load-more/examples/table/)** - Ajax Load More will display query results in a table format.
 
-[&rarr; See All Examples](https://connekthq.com/plugins/ajax-load-more/examples/)
+&rarr; [See All Examples](https://connekthq.com/plugins/ajax-load-more/examples/)
 
 The [Custom Repeater Add-On](https://connekthq.com/plugins/ajax-load-more/custom-repeaters/) has been installed for use on each of our product demos.
 
@@ -242,7 +243,7 @@ The following [functions](https://connekthq.com/plugins/ajax-load-more/docs/call
 
 ***
 
-[&rarr; View All Callback Functions](https://connekthq.com/plugins/ajax-load-more/docs/callback-functions/)
+&rarr; [View All Callback Functions](https://connekthq.com/plugins/ajax-load-more/docs/callback-functions/)
 
 
 
@@ -251,7 +252,7 @@ The following [functions](https://connekthq.com/plugins/ajax-load-more/docs/call
 
 Ajax Load More has a variety of WordPress [filters](https://connekthq.com/plugins/ajax-load-more/docs/filter-hooks/) in place that enable users to hook into Ajax Load More to insert or modify data.
 
-[&rarr; See All Filters](https://connekthq.com/plugins/ajax-load-more/docs/filter-hooks/)
+&rarr; [See All Filters](https://connekthq.com/plugins/ajax-load-more/docs/filter-hooks/)
 
 
 
@@ -282,7 +283,7 @@ Ajax Load More passes the following PHP **[variables](https://connekthq.com/plug
 
 Your reviews make a big difference! Please consider taking the time to [review my plugin](https://wordpress.org/support/view/plugin-reviews/ajax-load-more). Your ratings and reviews help the plugin grow and provide the motivation needed to keep pushing it forward.
 
-[&rarr; Leave a Review](https://wordpress.org/support/plugin/ajax-load-more/reviews/#new-post)
+&rarr; [Leave a Review](https://wordpress.org/support/plugin/ajax-load-more/reviews/#new-post)
 
 
 
@@ -295,6 +296,8 @@ Your reviews make a big difference! Please consider taking the time to [review m
 1. Create your shortcode
 2. Add the shortcode to your page, by adding it through the content editor or placing it directly within one of your template files.
 3. Load a page with your shortcode in place and watch Ajax Load More fetch your posts.
+
+&rarr; [Read the Implementation Guide](https://connekthq.com/plugins/ajax-load-more/docs/implementation-guide/)
 
 = What are my server requirements? =
 
@@ -377,6 +380,19 @@ How to install Ajax Load More.
 
 == Changelog ==
 
+= 5.1.4 - August 15, 2019 =
+* NEW - Added No Results Text(`no_results_text`) parameter to display text/html when zero results are returned in an Ajax Load More query.
+* NEW - Added `almOnChange` callback dispatch at the beginning of every Ajax Load More query.
+* NEW - Added `almOnLoad` callback dispatched when Ajax Load More initiates.
+
+
+= 5.1.3 - August 6, 2019 =
+* FIX - Fixed issue with tag archives when using WPML or Polylang translation plugins.
+* FIX - Fixed issue with deep link pagination in the [SEO](https://connekthq.com/plugins/ajax-load-more/add-ons/search-engine-optimization/) and [Filters](https://connekthq.com/plugins/ajax-load-more/add-ons/filters/) addon when adding HTML comments or empty whitespace to the start/end of Repeater Template
+* UPDATE - Updated SEO `<noscript/>` markup to include First and Last pagination links for search crawlers.
+* UPDATE - Admin UI/UX updates.
+
+
 = 5.1.2 - June 24, 2019 =
 * NEW - Added direct WooCommerce integration using the `woocommerce` shortcode parameter. Blog post and docs coming soon how to use this new parameter with archive and product listing pages.
 * FIX - Fixed issue with element scroll and auto-focus in iOS and Android devices.
@@ -392,7 +408,7 @@ How to install Ajax Load More.
 * FIX - Security fix for $querystring URLs in Preloaded content.
 * FIX - Fixed issue with nested `.alm-preloaded` div elements with Filters and Preloaded addon.
 * FIX - Fixed issue with alm_render function throwing non static function warning message.
-* FIX - Fixed JS console warning message abut duplicate `babel/polyfill scripts` for users running other versions of Babel. 
+* FIX - Fixed JS console warning message abut duplicate `babel/polyfill scripts` for users running other versions of Babel.
 * FIX - Fixed `srcSet` issue with paged results in Filters and SEO addon when using Safari browser.
 
 
@@ -402,8 +418,8 @@ How to install Ajax Load More.
 
 = 5.1.0 - May 7, 2019 =
 MAJOR UPDATE NOTICE
-Ajax Load More can now use the WordPress REST API as the default for Ajax requests - this includes all add-ons and extensions. 
-Users that wish to continue using `admin-ajax.php` for Ajax requests can disable the REST API from  `Ajax Load More > Settings > Global Settings` in your WordPress admin. 
+Ajax Load More can now use the WordPress REST API as the default for Ajax requests - this includes all add-ons and extensions.
+Users that wish to continue using `admin-ajax.php` for Ajax requests can disable the REST API from  `Ajax Load More > Settings > Global Settings` in your WordPress admin.
 
 For backwards compatibility, all users running WordPress version 4.7 or lower will default to using `admin-ajax.php`.
 
@@ -418,8 +434,7 @@ What's New in 5.1.0
 * FIX - Fixed issue with images not displaying in Safari when `transition_container="false"` is set.
 * FIX - Fixed issue where Load More button was not hiding after `destory_after` value was reached.
 * FIX - Fixed issue with `meta_value` shortcode parameter. Passing zero as a value was returning false and not the number.
-* FIX - Fixed IE11 issue where filtering was not working with camelCase data attributes. 
-
+* FIX - Fixed IE11 issue where filtering was not working with camelCase data attributes.
 
 
 = 5.0.2 - April 4, 2019 =
@@ -463,25 +478,6 @@ What's New in 5.0.0
 * FIX - Fixed issue with `alm-listing` container causing an error with the Comments addon.
 * FIX - Added fix for `destroy_after` not triggered button `.done` class.
 * Fix - Various JS other fixes and UX improvements.
-
-
-= 4.2.0.1 - January 16, 2019 =
-* FIX - Removed duplicate `transition_container_classes` when using Paging add-on.
-* FIX - Fixed issue with `alm-listing` container causing an error with the Comments addon.
-
-= 4.2.0 - January 15, 2019 =
-* UPGRADE NOTICE - If you also are using the Previous Post add-on you must also update that plugin.
-* NEW - Added new render function `alm_render` for displaying ALM without a shortcode.
-* UPDATE - Started updating core JS to remove jQuery functions. Hopefully sooner than later jQuery will no longer be a dependancy.
-* UPDATE - Updated default `scroll_distance` to 100 from 150.
-* UPDATE - Various admin UI/UX updates.
-* UPDATE - Various bug fixes.
-
-= 4.1.0 - December 6, 2018 =
-* NEW - Added initial support for nesting Ajax Load More instances. Users can now run Ajax Load More inside of another instance of Ajax Load More. For example, using Next Page add-on functionality inside of Previous Post content(Single posts). `[ajax_load_more nested="true"]`. Note: This is new functionality as should be used with caution as it has not fully been tested through every possible situation. Nested ALM Filters are not currently supported.
-* NEW - Added new plugin uninstall script and settings for removing all Ajax Load More data on plugin removal/deletion.
-* FIX - Fixed issue where filtering would stall when zero results were returned in an Ajax query.
-* FIX - Added bug fix for Shortcode Builder throwing a JS error when tags and/or categories are empty.
 
 
 = 4.0 - November 5, 2018 =

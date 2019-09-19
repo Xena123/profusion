@@ -29,13 +29,20 @@
     <div class="cld-field-wrap">
         <label><?php _e( 'Like Dislike Restriction', CLD_TD ); ?></label>
         <div class="cld-field">
-            <select name="cld_settings[basic_settings][like_dislike_resistriction]" class="cld-form-field">
+            <select name="cld_settings[basic_settings][like_dislike_resistriction]" class="cld-form-field cld-toggle-trigger" data-toggle-class="cld-login-link">
                 <option value="cookie" <?php selected( $cld_settings['basic_settings']['like_dislike_resistriction'], 'cookie' ); ?>><?php _e( 'Cookie Restriction', CLD_TD ); ?></option>
                 <option value="ip" <?php selected( $cld_settings['basic_settings']['like_dislike_resistriction'], 'ip' ); ?>><?php _e( 'IP Restriction', CLD_TD ); ?></option>
                 <option value="user" <?php selected( $cld_settings['basic_settings']['like_dislike_resistriction'], 'user' ); ?>><?php _e( 'Logged In User Restriction', CLD_TD ); ?></option>
                 <option value="no" <?php selected( $cld_settings['basic_settings']['like_dislike_resistriction'], 'no' ); ?>><?php _e( 'No Restriction', CLD_TD ); ?></option>
             </select>
             <p class="description"><?php _e( 'Please choose the restriction you want to assign to likers and dislikers', CLD_TD ); ?></p>
+        </div>
+    </div>
+    <div class="cld-field-wrap cld-login-link" data-toggle-value="user" <?php $this->display_none( $cld_settings['basic_settings']['like_dislike_resistriction'], 'user' ); ?>>
+        <label><?php _e( 'Login Link', CLD_TD ); ?></label>
+        <div class="cld-field">
+            <input type="text" name="cld_settings[basic_settings][login_link]" class="cld-form-field" value="<?php echo (!empty( $cld_settings['basic_settings']['login_link'] )) ? esc_url( $cld_settings['basic_settings']['login_link'] ) : ''; ?>"/>
+            <p class="description"><?php esc_html_e( 'Please enter the login link where users will be redirected while trying to like or dislike without logging in. Please leave blank if you don\'t want to redirect users to login page.', CLD_TD ); ?></p>
         </div>
     </div>
     <div class="cld-field-wrap">

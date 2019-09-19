@@ -115,6 +115,15 @@ $like_count = apply_filters( 'cld_like_count', $like_count, $comment_id );
  */
 $dislike_count = apply_filters( 'cld_dislike_count', $dislike_count, $comment_id );
         </pre>
+        <pre>
+/**
+ * Filters the fontawesome file being enqueued
+ *
+ * @param string $fontawesome_url
+ * @since 1.0.8
+ */
+$fontawesome_url = apply_filters( 'cld_fontawesome_url', $fontawesome_url );
+        </pre>
     </div>
     <div class="cld-separator"></div>
 

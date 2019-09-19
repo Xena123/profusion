@@ -9,9 +9,9 @@ jQuery(document).ready(function ($) {
         $(this).addClass('nav-tab-active');
         $('.cld-settings-section').hide();
         $('.cld-settings-section[data-settings-ref="' + settings_ref + '"]').show();
-        if(settings_ref == 'help' || settings_ref == 'about'){
+        if (settings_ref == 'help' || settings_ref == 'about') {
             $('.cld-settings-action').hide();
-        }else{
+        } else {
             $('.cld-settings-action').show();
         }
 
@@ -60,7 +60,7 @@ jQuery(document).ready(function ($) {
                     var image_url = uploaded_image.toJSON().url;
                     // Let's assign the url value to the input field
                     selector.parent().find('input[type="text"]').val(image_url);
-                    selector.parent().find('.cld-preview-holder').html('<img src="'+image_url+'"/>');
+                    selector.parent().find('.cld-preview-holder').html('<img src="' + image_url + '"/>');
                 });
     });
 
@@ -71,12 +71,12 @@ jQuery(document).ready(function ($) {
         var settings_data = '';
         $('.cld-form-field').each(function () {
             var value = $(this).val();
-            if($(this).attr('type') && $(this).attr('type') == 'checkbox'){
-                if(!$(this).is(':checked')){
+            if ($(this).attr('type') && $(this).attr('type') == 'checkbox') {
+                if (!$(this).is(':checked')) {
                     var value = 0;
                 }
             }
-            
+
             var name = $(this).attr('name');
             var parse_value = name + '=' + value;
             if (settings_data != '') {
@@ -141,10 +141,20 @@ jQuery(document).ready(function ($) {
                     $('.cld-loader').hide();
                     $('.cld-info').html(res);
                     location.reload();
-                    
+
 
                 }
             });
         }
+    });
+
+    /**
+     * Class show hide on select dropdown toggle
+     */
+    $('body').on('change', '.cld-toggle-trigger', function () {
+        var toggle_class = $(this).data('toggle-class');
+        var toggle_value = $(this).val();
+        $('.' + toggle_class).hide();
+        $('.' + toggle_class + '[data-toggle-value="' + toggle_value + '"]').show();
     });
 });

@@ -38,12 +38,21 @@ if ( is_user_logged_in() ) {
     $current_user_id = get_current_user_id();
     if ( in_array( $current_user_id, $liked_users ) ) {
         $user_check = 1;
+        $already_liked = 1;
     } else {
         $user_check = 0;
     }
 } else {
     $user_check = 1;
+    $already_liked = 0;
 }
+
+if ( $cld_settings['basic_settings']['like_dislike_resistriction'] == 'user' && !empty( $cld_settings['basic_settings']['login_link'] ) && $user_check == 1 && $already_liked == 0 ) {
+    $href = $cld_settings['basic_settings']['login_link'];
+} else {
+    $href = 'javascript:void(0)';
+}
+
 
 // $this->print_array($liked_ips);
 $user_ip_check = (in_array( $user_ip, $liked_ips )) ? 1 : 0;
