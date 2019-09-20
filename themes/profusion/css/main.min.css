@@ -12555,14 +12555,14 @@ body .row-blog.align-items-end {
     margin-left: auto;
 }
 
-@media(min-width: 1000px) {
+@media(min-width: 750px) {
     .l-contact {
         display: flex;
     }
 
     .l-contact--part {
         width: 50%;
-        padding: 35px;
+        padding: 50px 35px 20px;
     }
 }
 

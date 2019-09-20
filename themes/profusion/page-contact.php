@@ -108,7 +108,8 @@ get_header(); ?>
           </div>
         </div>
         <?php endif;?>
-        <div class="gray-bg l-contact--part">
+
+        <div class="gray-bg l-contact--part l-contact--part--form">
           <div class="container">
             <div class="w980 section-b t_contact_form">
               <?php echo do_shortcode('[contact-form-7 id="19" title="Contact form 1"]'); ?>
@@ -119,4 +120,4 @@ get_header(); ?>
     </main>          
     <?php endwhile; ?>
 <?php endif; ?>
-<?php get_footer(); ?>
+<?php get_footer('contact'); ?>
