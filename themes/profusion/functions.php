@@ -99,7 +99,7 @@ function on_publish_pending_post($data, $postarr){
 }
 add_filter('wp_insert_post_data', 'on_publish_pending_post', 10, 2 );
 
-
+define( 'WP_DEBUG', true );
 /* ------------------------------------------------ */
 /* AJAX form callbacks. */
 /* ------------------------------------------------ */

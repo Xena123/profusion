@@ -1,3 +1,4 @@
+<!-- flexible-guide.php -->
 <?php while ( have_rows('guide_content') ) : the_row();
   if( get_row_layout() == 'guide_download' ) {
       include(locate_template('parts/guide-download.php'));

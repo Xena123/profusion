@@ -12566,4 +12566,16 @@ body .row-blog.align-items-end {
     }
 }
 
+.story-box .hapen-box-info {
+    text-align: left;
+}
 
+@media (max-width: 992px) {
+    .story-box {
+        margin-bottom: 15px;
+    }
+}
+
+.no-link > a {
+    cursor: default;
+}
